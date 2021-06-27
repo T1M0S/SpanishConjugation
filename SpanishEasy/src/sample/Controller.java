@@ -84,65 +84,31 @@ public class Controller {
                     case "Future" -> answer = futureCase(answer, word, matcher);
                     case "Preterite" -> {
                         switch (pronounLabel.getText()) {
-                            case "yo" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "e'";
-                            }
-                            case "tu" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "aste";
-                            }
-                            case "el", "ella", "usted" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "o'";
-                            }
-                            case "nosotros" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "amos";
-                            }
-                            case "vosotros" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "asteis";
-                            }
-                            case "ellos", "ellas", "ustedes" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "aron";
-                            }
+                            case "yo" -> answer = word.substring(0, matcher.end() - 2) + "e'";
+                            case "tu" -> answer = word.substring(0, matcher.end() - 2) + "aste";
+                            case "el", "ella", "usted" -> answer = word.substring(0, matcher.end() - 2) + "o'";
+                            case "nosotros" -> answer = word.substring(0, matcher.end() - 2) + "amos";
+                            case "vosotros" -> answer = word.substring(0, matcher.end() - 2) + "asteis";
+                            case "ellos", "ellas", "ustedes" -> answer = word.substring(0, matcher.end() - 2) + "aron";
                         }
                     }
                     case "Present" -> {
                         switch (pronounLabel.getText()) {
-                            case "yo" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "o";
-                            }
-                            case "tu" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "as";
-                            }
-                            case "el", "ella", "usted" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "a";
-                            }
-                            case "nosotros" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "amos";
-                            }
-                            case "vosotros" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "ai's";
-                            }
-                            case "ellos", "ellas", "ustedes" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "an";
-                            }
+                            case "yo" -> answer = word.substring(0, matcher.end() - 2) + "o";
+                            case "tu" -> answer = word.substring(0, matcher.end() - 2) + "as";
+                            case "el", "ella", "usted" -> answer = word.substring(0, matcher.end() - 2) + "a";
+                            case "nosotros" -> answer = word.substring(0, matcher.end() - 2) + "amos";
+                            case "vosotros" -> answer = word.substring(0, matcher.end() - 2) + "ai's";
+                            case "ellos", "ellas", "ustedes" -> answer = word.substring(0, matcher.end() - 2) + "an";
                         }
                     }
                     case "Imperfect" -> {
                         switch (pronounLabel.getText()) {
-                            case "yo", "el", "ella", "usted" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "aba";
-                            }
-                            case "tu" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "abas";
-                            }
-                            case "nosotros" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "a'bamos";
-                            }
-                            case "vosotros" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "abais";
-                            }
-                            case "ellos", "ellas", "ustedes" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "aban";
-                            }
+                            case "yo", "el", "ella", "usted" -> answer = word.substring(0, matcher.end() - 2) + "aba";
+                            case "tu" -> answer = word.substring(0, matcher.end() - 2) + "abas";
+                            case "nosotros" -> answer = word.substring(0, matcher.end() - 2) + "a'bamos";
+                            case "vosotros" -> answer = word.substring(0, matcher.end() - 2) + "abais";
+                            case "ellos", "ellas", "ustedes" -> answer = word.substring(0, matcher.end() - 2) + "aban";
                         }
                     }
                     case "Conditional" -> answer = ConditionalCase(answer, word, matcher);
@@ -154,43 +120,21 @@ public class Controller {
                     case "Preterite" -> answer = PreteriteCase(answer, word, matcher);
                     case "Present" -> {
                         switch (pronounLabel.getText()) {
-                            case "yo" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "o";
-                            }
-                            case "tu" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "es";
-                            }
-                            case "el", "ella", "usted" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "e";
-                            }
-                            case "nosotros" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "emos";
-                            }
-                            case "vosotros" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "e'is";
-                            }
-                            case "ellos", "ellas", "ustedes" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "en";
-                            }
+                            case "yo" -> answer = word.substring(0, matcher.end() - 2) + "o";
+                            case "tu" -> answer = word.substring(0, matcher.end() - 2) + "es";
+                            case "el", "ella", "usted" -> answer = word.substring(0, matcher.end() - 2) + "e";
+                            case "nosotros" -> answer = word.substring(0, matcher.end() - 2) + "emos";
+                            case "vosotros" -> answer = word.substring(0, matcher.end() - 2) + "e'is";
+                            case "ellos", "ellas", "ustedes" -> answer = word.substring(0, matcher.end() - 2) + "en";
                         }
                     }
                     case "Imperfect" -> {
                         switch (pronounLabel.getText()) {
-                            case "yo", "ella", "usted", "el" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "i'a";
-                            }
-                            case "tu" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "i'as";
-                            }
-                            case "nosotros" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "i'amos";
-                            }
-                            case "vosotros" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "i'ais";
-                            }
-                            case "ellos", "ellas", "ustedes" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "i'an";
-                            }
+                            case "yo", "ella", "usted", "el" -> answer = word.substring(0, matcher.end() - 2) + "i'a";
+                            case "tu" -> answer = word.substring(0, matcher.end() - 2) + "i'as";
+                            case "nosotros" -> answer = word.substring(0, matcher.end() - 2) + "i'amos";
+                            case "vosotros" -> answer = word.substring(0, matcher.end() - 2) + "i'ais";
+                            case "ellos", "ellas", "ustedes" -> answer = word.substring(0, matcher.end() - 2) + "i'an";
                         }
                     }
                     case "Conditional" -> answer = ConditionalCase(answer, word, matcher);
@@ -202,43 +146,21 @@ public class Controller {
                     case "Preterite" -> answer = PreteriteCase(answer, word, matcher);
                     case "Present" -> {
                         switch (pronounLabel.getText()) {
-                            case "yo" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "o";
-                            }
-                            case "tu" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "es";
-                            }
-                            case "el", "ella", "usted" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "e";
-                            }
-                            case "nosotros" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "imos";
-                            }
-                            case "vosotros" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "i's";
-                            }
-                            case "ellos", "ellas", "ustedes" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "en";
-                            }
+                            case "yo" -> answer = word.substring(0, matcher.end() - 2) + "o";
+                            case "tu" -> answer = word.substring(0, matcher.end() - 2) + "es";
+                            case "el", "ella", "usted" -> answer = word.substring(0, matcher.end() - 2) + "e";
+                            case "nosotros" -> answer = word.substring(0, matcher.end() - 2) + "imos";
+                            case "vosotros" -> answer = word.substring(0, matcher.end() - 2) + "i's";
+                            case "ellos", "ellas", "ustedes" -> answer = word.substring(0, matcher.end() - 2) + "en";
                         }
                     }
                     case "Imperfect" -> {
                         switch (pronounLabel.getText()) {
-                            case "yo", "el", "ella", "usted" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "i'a";
-                            }
-                            case "tu" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "i'as";
-                            }
-                            case "nosotros" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "i'amos";
-                            }
-                            case "vosotros" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "i'ais";
-                            }
-                            case "ellos", "ellas", "ustedes" -> {
-                                answer = word.substring(0, matcher.end() - 2) + "i'an";
-                            }
+                            case "yo", "el", "ella", "usted" -> answer = word.substring(0, matcher.end() - 2) + "i'a";
+                            case "tu" -> answer = word.substring(0, matcher.end() - 2) + "i'as";
+                            case "nosotros" -> answer = word.substring(0, matcher.end() - 2) + "i'amos";
+                            case "vosotros" -> answer = word.substring(0, matcher.end() - 2) + "i'ais";
+                            case "ellos", "ellas", "ustedes" -> answer = word.substring(0, matcher.end() - 2) + "i'an";
                         }
                     }
                     case "Conditional" -> answer = ConditionalCase(answer, word, matcher);
@@ -251,42 +173,22 @@ public class Controller {
 
     private String ConditionalCase(String answer, String word, Matcher matcher) {
         switch (pronounLabel.getText()) {
-            case "yo", "el", "ella", "usted" -> {
-                answer = word.substring(0, matcher.end()) + "i'a";
-            }
-            case "tu" -> {
-                answer = word.substring(0, matcher.end()) + "i'as";
-            }
-            case "nosotros" -> {
-                answer = word.substring(0, matcher.end()) + "i'amos";
-            }
-            case "vosotros" -> {
-                answer = word.substring(0, matcher.end()) + "i'ais";
-            }
-            case "ellos", "ellas", "ustedes" -> {
-                answer = word.substring(0, matcher.end()) + "i'an";
-            }
+            case "yo", "el", "ella", "usted" -> answer = word.substring(0, matcher.end()) + "i'a";
+            case "tu" -> answer = word.substring(0, matcher.end()) + "i'as";
+            case "nosotros" -> answer = word.substring(0, matcher.end()) + "i'amos";
+            case "vosotros" -> answer = word.substring(0, matcher.end()) + "i'ais";
+            case "ellos", "ellas", "ustedes" -> answer = word.substring(0, matcher.end()) + "i'an";
         }
         return answer;
     }
 
     private String PreteriteCase(String answer, String word, Matcher matcher) {
         switch (pronounLabel.getText()) {
-            case "yo" -> {
-                answer = word.substring(0, matcher.end() - 2) + "i'";
-            }
-            case "tu" -> {
-                answer = word.substring(0, matcher.end() - 2) + "iste";
-            }
-            case "el", "ella", "usted" -> {
-                answer = word.substring(0, matcher.end() - 2) + "io'";
-            }
-            case "nosotros" -> {
-                answer = word.substring(0, matcher.end() - 2) + "imos";
-            }
-            case "vosotros" -> {
-                answer = word.substring(0, matcher.end() - 2) + "isteis";
-            }
+            case "yo" -> answer = word.substring(0, matcher.end() - 2) + "i'";
+            case "tu" -> answer = word.substring(0, matcher.end() - 2) + "iste";
+            case "el", "ella", "usted" -> answer = word.substring(0, matcher.end() - 2) + "io'";
+            case "nosotros" -> answer = word.substring(0, matcher.end() - 2) + "imos";
+            case "vosotros" -> answer = word.substring(0, matcher.end() - 2) + "isteis";
             case "ellos", "ellas", "ustedes" -> answer = word.substring(0, matcher.end() - 2) + "ieron";
         }
         return answer;
@@ -294,27 +196,12 @@ public class Controller {
 
     private String futureCase(String answer, String word, Matcher matcher) {
         switch (pronounLabel.getText()) {
-            case "yo" -> {
-                answer = word.substring(0, matcher.end()) + "e'";
-            }
-            case "tu" -> {
-                answer = word.substring(0, matcher.end()) + "a's";
-            }
-            case "el", "ella", "usted" -> {
-                answer = word.substring(0, matcher.end()) + "a'";
-
-            }
-            case "nosotros" -> {
-                answer = word.substring(0, matcher.end()) + "emos";
-
-            }
-            case "vosotros" -> {
-                answer = word.substring(0, matcher.end()) + "e'is";
-
-            }
-            case "ellos", "ellas", "ustedes" -> {
-                answer = word.substring(0, matcher.end()) + "a'n";
-            }
+            case "yo" -> answer = word.substring(0, matcher.end()) + "e'";
+            case "tu" -> answer = word.substring(0, matcher.end()) + "a's";
+            case "el", "ella", "usted" -> answer = word.substring(0, matcher.end()) + "a'";
+            case "nosotros" -> answer = word.substring(0, matcher.end()) + "emos";
+            case "vosotros" -> answer = word.substring(0, matcher.end()) + "e'is";
+            case "ellos", "ellas", "ustedes" -> answer = word.substring(0, matcher.end()) + "a'n";
         }
         return answer;
     }
