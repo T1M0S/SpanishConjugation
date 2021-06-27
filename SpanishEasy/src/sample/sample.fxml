@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Label fx:id="wordLabel" alignment="CENTER" layoutX="202.0" layoutY="26.0" text="Word" AnchorPane.rightAnchor="203.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="pronounLabel" layoutX="191.0" layoutY="192.0" text="pronoun" AnchorPane.bottomAnchor="100.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="tenseLabel" layoutX="208.0" layoutY="244.0" text="tense" underline="true">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+      <Label fx:id="answerLabel" layoutX="204.0" layoutY="99.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="checkButton" layoutY="-7.0" mnemonicParsing="false" opacity="0.61" prefHeight="350.0" prefWidth="461.0" text="Check" />
+    </children>
+</AnchorPane>
